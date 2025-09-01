@@ -75,6 +75,8 @@
                bottom: auto;
                left: auto;
                right: -11.8em;
+               overflow: hidden;
+               clip-path: inset(0 5% 0 0);
           }
           .cloud1 {
                    width: 38.8125em;
@@ -86,14 +88,73 @@
                    z-index: 2;
           }
 
-          .cloud2 {
-                width: 31.9375em;
+            .cloud2 {
+               width: 15.96875em; /* Half of original width */
                position: absolute;
                top: 21.8em;
                bottom: auto;
                left: auto;
                right: -16em;
+               overflow: hidden; /* Ensures only half is visible if the image is wider */
+               clip-path: inset(0 50% 0 0); /* Shows left half of the cloud */
+            }
+          .flower{
+               z-index: 3;
+               width: 23.7119em;
+               max-width: none;
+               position: absolute;
+               top: 75%;
+               bottom: -5.9em;
+               left: auto;
+               right: -15.6em;
+               overflow: hidden;
+               clip-path: inset(0 25% 0 0);
           }
+          .bug{
+                bottom: -5.7em;
+                left: -1.8em;
+          }
+          .moon{
+                 width: 9.125em;
+                 position: absolute;
+                 top: 4.5em;
+                 bottom: auto;
+                 left: 22.5em;
+                 right: auto;
+          }
+          .peach{
+                top: auto;
+                bottom: -.4em;
+                left: 25.2em;
+                right: auto;
+          }
+          .pencil{
+                  z-index: 2;
+                  width: 6.1875em;
+                  position: absolute;
+                  top: auto;
+                  bottom: 8.6em;
+                  left: auto;
+                  right: 20.8em;
+          }
+          .sausage{
+                  z-index: 2;
+                  width: 8.1875em;
+                  position: absolute;
+                  top: auto;
+                  bottom: -3.5em;
+                  left: auto;
+                  right: 24em;
+          }
+          .jar{
+              width: 7.9375em;
+              position: absolute;
+              top: 15em;
+              bottom: auto;
+              left: 15em;
+              right: auto;
+          }
+
     </style>
 </head>
 <body>
@@ -113,8 +174,17 @@
         <img src="images/rainbow2(bottle).svg" alt="rainbow" class="rainbow">
         <img src="images/rainbow1.svg" alt="rainbow1" class="rainbow-r">
         <img src="images/pink cloud.svg" alt="pink-cloud" class="cloud1">
-        <img src="images/dot.svg" alt="dots" class="dots" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -2;">
+        <img src="images/dot.svg" alt="dots" class="dots" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -2;">
         <img src="images/red cloud.svg" alt="cloud2" class="cloud2">
+        <img src="images/sunflower.svg" alt="flower" class="flower">
+        <img src="images/flyingbud.svg" alt="bug" class="bug">
+        <img src="images/moon.svg" alt="moon" class="moon">
+        <img src="images/peach.svg" alt="peach" class="peach">
+        <img src="images/pencil.svg" alt="pencil" class="pencil">
+        <img src="images/sausage.svg" alt="sausage" class="sausage">
+        <img src="images/spilling jar.svg" alt="jar" class="jar">
+        
+
       </div>
 </body>
 </html>
