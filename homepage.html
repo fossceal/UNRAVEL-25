@@ -155,6 +155,115 @@
               right: auto;
           }
 
+          /* PURE Stack Styles */
+          .pure-stack-container {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 600px;
+              height: 200px;
+              z-index: 5;
+          }
+
+          .pure-frame {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+              animation: pureFrameAnimation 8s infinite;
+          }
+
+          .pure-frame img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+          }
+
+          .pure-frame:nth-child(1) {
+              animation-delay: 0s;
+              transform: rotate(-8deg) translate(-25px, -15px);
+          }
+
+          .pure-frame:nth-child(2) {
+              animation-delay: 0s;
+              transform: rotate(12deg) translate(30px, -25px);
+          }
+
+          .pure-frame:nth-child(3) {
+              animation-delay: 0s;
+              transform: rotate(-15deg) translate(-35px, 20px);
+          }
+
+          .pure-frame:nth-child(4) {
+              animation-delay: 0s;
+              transform: rotate(18deg) translate(40px, 25px);
+          }
+
+          @keyframes pureFrameAnimation {
+              0%, 20% {
+                  opacity: 1;
+                  transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+              }
+              25%, 45% {
+                  opacity: 1;
+                  transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+              }
+              50%, 100% {
+                  opacity: 1;
+                  transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+              }
+          }
+
+          .pure-frame:nth-child(1) {
+              --rotation: -8deg;
+              --x: -25px;
+              --y: -15px;
+          }
+
+          .pure-frame:nth-child(2) {
+              --rotation: 12deg;
+              --x: 30px;
+              --y: -25px;
+          }
+
+          .pure-frame:nth-child(3) {
+              --rotation: -15deg;
+              --x: -35px;
+              --y: 20px;
+          }
+
+          .pure-frame:nth-child(4) {
+              --rotation: 18deg;
+              --x: 40px;
+              --y: 25px;
+          }
+
+          /* Location text */
+          .location-text {
+              position: absolute;
+              top: 35%;
+              left: 50%;
+              transform: translateX(-50%);
+              font-size: 1.5rem;
+              color: white;
+              z-index: 6;
+              text-align: center;
+          }
+
+          /* Responsive */
+          @media (max-width: 768px) {
+              .pure-stack-container {
+                  width: 90vw;
+                  height: 120px;
+              }
+              
+              .location-text {
+                  font-size: 1.2rem;
+                  top: 30%;
+              }
+          }
+
     </style>
 </head>
 <body>
@@ -165,8 +274,25 @@
         </ul>
     </nav>
     <div class="content">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh;">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; width: 100vw; max-width: 100vw; overflow: hidden;"></div>
             
+        </div>
+
+
+        <!-- PURE Stack Container -->
+        <div class="pure-stack-container">
+            <div class="pure-frame">
+                <img src="images/frame1.svg" alt="PURE Frame 1">
+            </div>
+            <div class="pure-frame">
+                <img src="images/frame2.svg" alt="PURE Frame 2">
+            </div>
+            <div class="pure-frame">
+                <img src="images/frame3.svg" alt="PURE Frame 3">
+            </div>
+            <div class="pure-frame">
+                <img src="images/frame4.svg" alt="PURE Frame 4">
+            </div>
         </div>
 
         <img src="images/stars.svg" alt="stars" class="stars">
@@ -188,5 +314,3 @@
       </div>
 </body>
 </html>
-
-
