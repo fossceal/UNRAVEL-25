@@ -15,6 +15,8 @@
             background-color: #2F2F2F;
             font-family: Arial, sans-serif;
             color: white;
+            overflow-x: hidden;
+            width: 100vw;
         }
         
         nav {
@@ -164,6 +166,9 @@
               width: 600px;
               height: 200px;
               z-index: 5;
+              display: flex;
+              align-items: center;
+              justify-content: center;
           }
 
           .pure-frame {
@@ -171,33 +176,31 @@
               width: 100%;
               height: 100%;
               opacity: 1;
-              animation: pureFrameAnimation 8s infinite;
+              transition: transform 0.2s ease-out;
           }
 
           .pure-frame img {
               width: 100%;
               height: 100%;
               object-fit: contain;
+              
           }
 
           .pure-frame:nth-child(1) {
               animation-delay: 0s;
-              transform: rotate(-8deg) translate(-25px, -15px);
+             
           }
 
           .pure-frame:nth-child(2) {
               animation-delay: 0s;
-              transform: rotate(12deg) translate(30px, -25px);
           }
 
           .pure-frame:nth-child(3) {
               animation-delay: 0s;
-              transform: rotate(-15deg) translate(-35px, 20px);
           }
 
           .pure-frame:nth-child(4) {
               animation-delay: 0s;
-              transform: rotate(18deg) translate(40px, 25px);
           }
 
           @keyframes pureFrameAnimation {
@@ -216,27 +219,22 @@
           }
 
           .pure-frame:nth-child(1) {
-              --rotation: -8deg;
-              --x: -25px;
-              --y: -15px;
+              z-index: 4;
           }
 
           .pure-frame:nth-child(2) {
-              --rotation: 12deg;
-              --x: 30px;
-              --y: -25px;
+              z-index: 3;
+              /* transform: scale(0.95);  Removed to allow JS animation */
           }
 
           .pure-frame:nth-child(3) {
-              --rotation: -15deg;
-              --x: -35px;
-              --y: 20px;
+              z-index: 2;
+              /* transform: scale(0.90);  Removed to allow JS animation */
           }
 
           .pure-frame:nth-child(4) {
-              --rotation: 18deg;
-              --x: 40px;
-              --y: 25px;
+              z-index: 1;
+              /* transform: scale(0.85);  Removed to allow JS animation */
           }
 
           /* Location text */
@@ -282,16 +280,19 @@
         <!-- PURE Stack Container -->
         <div class="pure-stack-container">
             <div class="pure-frame">
-                <img src="images/frame1.svg" alt="PURE Frame 1">
+                <img src="images/UNRAVEL.svg" alt="PURE Frame 1">
             </div>
             <div class="pure-frame">
-                <img src="images/frame2.svg" alt="PURE Frame 2">
+                <img src="images/UNRAVEL-1.svg" alt="PURE Frame 2">
             </div>
             <div class="pure-frame">
-                <img src="images/frame3.svg" alt="PURE Frame 3">
+                <img src="images/UNRAVEL-2.svg" alt="PURE Frame 3">
             </div>
             <div class="pure-frame">
-                <img src="images/frame4.svg" alt="PURE Frame 4">
+                <img src="images/UNRAVEL-3.svg" alt="PURE Frame 4">
+            </div>
+            <div class="pure-frame">
+                <img src="images/UNRAVEL-4.svg" alt="PURE Frame 5">
             </div>
         </div>
 
@@ -312,5 +313,37 @@
         
 
       </div>
+    <script>
+    // Select frames 2, 3, 4
+    const frames = Array.from(document.querySelectorAll('.pure-frame')).slice(1, 5);
+
+    function handleMouseMove(e) {
+        console.log('handleMouseMove');
+        const { innerWidth, innerHeight } = window;
+        console.log(`innerWidth=${innerWidth}, innerHeight=${innerHeight}`);
+        // Normalize cursor position to [-1, 1]
+        const x = (e.clientX / innerWidth) * 2 - 1;
+        const y = (e.clientY / innerHeight) * 2 - 1;
+
+        console.log(`normalized pos: x=${x}, y=${y}`);
+
+        frames.forEach((frame, i) => {
+            console.log(`processing frame ${i+1}`);
+            // Layer multiplier: frame2=1, frame3=2, frame4=3
+            const layer = i + 1;
+            console.log(`layer=${layer}`);
+            // Tilt effect: closest edge moves less, farthest more
+            // X controls left/right tilt, Y controls up/down tilt
+            // Increase effect for deeper layers
+            const tiltX = x * 10 * layer; // left/right
+            const tiltY = y * 20 * layer; // up/down
+            console.log(`tiltX=${tiltX}, tiltY=${tiltY}`);
+            // Simulate tile: farthest edge moves more upwards
+            frame.style.transform = `scale(${1 - layer * 0.05}) rotate(${layer * x * 8}deg) translate(${tiltX}px, ${tiltY}px)`;
+        });
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+    </script>
 </body>
 </html>
