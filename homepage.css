@@ -12,35 +12,59 @@ body {
     width: 100vw;
 }
 
-nav {
-    
-    padding: 1rem 2rem;
-
+.logo img{
+width: 15vw; 
+height: auto;
 }
+
+.date {
+    text-align: center;
+    margin: 2rem 0;
+    transform: translateY(150px);
+    font-size: 30px;
+}
+
+.navbar {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    padding-bottom: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
 .nav-btn {
-    color: #f3f4f1;
+    color: #050505;
     border-radius: 2rem 2rem 2rem 2rem / 3rem 3rem 3rem 3rem; /* Oval shape */
     padding: 0.7rem 2.5rem;
     background: #c1c586;
     box-shadow: 0 6px 24px rgba(0,0,0,0.25); /* Stronger drop shadow */
     font-weight: bold;
     z-index: 100;
-    display: inline-block;
-    position: relative;
+    text-decoration: none;
 }
 
 .nav-btn1 {
-    color: #f3f4f1;
+    color: #000000;
     border-radius: 2rem 2rem 2rem 2rem / 3rem 3rem 3rem 3rem; /* Oval shape */
     padding: 0.7rem 2.5rem;
     background: #c1c586;
     box-shadow: 0 6px 24px rgba(0,0,0,0.25); /* Stronger drop shadow */
     font-weight: bold;
     z-index: 101;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    display: inline-block;
+    text-decoration: none;
+}
+
+.adithyan{
+transform: translateY(150px);
+font-size: 2vw;
+background:rgb(209, 214, 179)
 }
 
 
@@ -50,8 +74,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-left: 6rem;
-    margin-top: 1.5rem;
     font-weight: bold;
     font-size: 1.4rem;
     z-index: 10;
