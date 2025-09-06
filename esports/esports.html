@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Sports Carousel</title>
+        <link rel="stylesheet" href="esports.css">
+    </head>
+    <body>
+        <div>
+            <h1>E-Sports Events</h1>
+            <div class="carousel-container">
+                <button class="btn prev"
+                    onclick="changeSlide(-1)">&#10094;</button>
+
+                <div class="carousel" id="carousel">
+                    <div class="slide active">
+                        <img
+                                src="images/chess.png" alt="Chess">
+                    </div>
+                    <div class="slide">
+                        <img
+                                src="images/e-football.png"
+                                alt="E-Football">
+                    </div>
+                    <div class="slide">
+                        <img
+                                src="images/pubg.png" alt="PUBG">
+                    </div>
+                    <div class="slide">
+                        <img
+                                src="images/valorant.png" alt="Valorant">
+                    </div>
+                </div>
+
+                <button class="btn next"
+                    onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="dots" id="dots"></div>
+        </div>
+        <script src="esports.js"></script>
+    </body>
+</html>
