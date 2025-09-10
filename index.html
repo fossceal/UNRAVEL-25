@@ -10,16 +10,65 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
+    <!---home section--->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#esports">Esports</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+      </ul>
+      <div class="logo">
+        <img src="/images/alchemy logo.svg" alt="UNRAVEL LOGO" />
+      </div>
+      <div class="nav-buttons">
+        <a href="#" class="nav-btn nav-btn-box">Register</a>
+        <a href="#" class="nav-btn1 nav-btn-box"> <i class="bi bi-discord"></i>
+          OUR FAM!</a>
+      </div>
+    </nav>
+    <div class="date">
+      <p> this is where the date <br> and venue must go</p>
+    </div>
+    <div id="home" class="home">
+      <div class="pure-stack-container">
+        <div class="pure-frame"><img src="/images/UNRAVEL-1.svg"
+            alt="PURE Frame 1" /></div>
+        <div class="pure-frame"><img src="/images/UNRAVEL-1.svg"
+            alt="PURE Frame 2" /></div>
+        <div class="pure-frame"><img src="/images/UNRAVEL-2.svg"
+            alt="PURE Frame 3" /></div>
+        <div class="pure-frame"><img src="/images/UNRAVEL-3.svg"
+            alt="PURE Frame 4" /></div>
+        <div class="pure-frame"><img src="/images/UNRAVEL-4.svg"
+            alt="PURE Frame 5" /></div>
+      </div>
+      <a href="#" class="nav-btn1 nav-btn-box adithyan">Explore</a>
+      <img src="images/stars.svg" alt="stars" class="stars">
+
+      <img src="images/rainbow2(bottle).svg" alt="rainbow" class="rainbow">
+      <img src="images/rainbow1.svg" alt="rainbow1" class="rainbow-r">
+      <img src="images/pink cloud.svg" alt="pink-cloud" class="cloud1">
+      <img src="images/dot.svg" alt="dots" class="dots"
+        style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -2;">
+      <img src="images/red cloud.svg" alt="cloud2" class="cloud2">
+      <img src="images/sunflower.svg" alt="flower" class="flower">
+      <img src="images/flyingbud.svg" alt="bug" class="bug">
+      <img src="images/moon.svg" alt="moon" class="moon">
+      <img src="images/peach.svg" alt="peach" class="peach">
+      <img src="images/pencil.svg" alt="pencil" class="pencil">
+
+      <img src="images/spilling jar.svg" alt="jar" class="jar">
+    </div>
+
+    <script src="homepage.js"></script>
 
     <!---esports section--->
     <div class="particles" id="particles"></div>
-
     <div class="esports-cxt" id="esports">
-      <h1>E-SPORTS ARENA</h1>
 
       <div class="carousel-wrapper">
         <div class="carousel-container">
-
+          <h1>E-SPORTS ARENA</h1>
           <div class="carousel" id="carousel">
             <div class="slide active" data-game="chess">
               <img
@@ -87,6 +136,7 @@
         </div>
       </div>
     </div>
+    <script src="/homepage/homepage.js"></script>
     <script src="/esports/esports.js"></script>
 
     <!---schedule section--->
@@ -426,7 +476,7 @@
       <div class="foot-1">
         <div class="foot-left">
           <p id="f-h"><span class="copyright">&copy;</span> UNRAVEL 2025 </p>
-          <a href="">Home</a>
+          <a href="#home">Home</a>
           <a href="#esports">Esports</a>
           <a href="#schedule">Schedule</a>
         </div>
