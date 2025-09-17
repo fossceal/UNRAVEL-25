@@ -8,8 +8,27 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/homepage/homepage.css">
   </head>
-  <body>
+  <body><!-- Cartoon Hamburger Menu Section -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="cartoon-menu" id="cartoonMenu">
+      <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+      <a href="#events"><i class="fas fa-gamepad"></i> Events</a>
+      <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
+    </nav>
+
+    <!-- Cartoon Logo Bar (Mobile Only) -->
+    <div class="mobile-logo-bar">
+      <img src="/images/alchemy logo.svg" alt="Event Logo" class="logo-img" />
+    </div>
+
     <!---home section--->
     <nav class="navbar">
       <ul>
@@ -26,12 +45,10 @@
           OUR FAM!</a>
       </div>
     </nav>
-    <div class="date">
-      <p> this is where the date <br> and venue must go</p>
-    </div>
+
     <div id="home" class="home">
       <div class="pure-stack-container">
-        <div class="pure-frame"><img src="/images/UNRAVEL-1.svg"
+        <div class="pure-frame"><img src="/images/UNRAVEL.svg"
             alt="PURE Frame 1" /></div>
         <div class="pure-frame"><img src="/images/UNRAVEL-1.svg"
             alt="PURE Frame 2" /></div>
@@ -60,7 +77,7 @@
       <img src="images/spilling jar.svg" alt="jar" class="jar">
     </div>
 
-    <script src="homepage.js"></script>
+    <script src="/homepage/homepage.js"></script>
 
     <!---esports section--->
     <div class="particles" id="particles"></div>
@@ -213,7 +230,7 @@
                 bottom: -600px;
                 left: -210px;
                 transform: translateX(0);
-                width: 1000px;
+                width: 800px;
                 z-index: 1;
               " />
           </div>
@@ -361,7 +378,7 @@
         <div class="strawberry-character1">
           <img
             src="/assets/engima2.svg"
-            style="width: 100%; max-width: 900px; transform: translateY(20%)" />
+            style="width: 100%; max-width: 700px; transform: translate(-40%,30%)" />
         </div>
         <div class="main-container">
           <div class="date-section">
@@ -375,7 +392,7 @@
                 bottom: -500px;
                 left: -50px;
                 transform: translateX(0);
-                width: 500px;
+                width: 300px;
                 z-index: 1;
               " />
           </div>
@@ -469,46 +486,75 @@
         </div>
       </section>
     </div>
+    <section id="collaborators" class="collaborators">
+      <h2>Our Collaborators</h2>
+
+      <div class="collab-logos">
+        <div class="logo-item"><img src="/assets/ieee.svg"
+            alt="Collaborator 1"></div>
+        <div class="logo-item"><img src="/assets/iste.svg"
+            alt="Collaborator 2"></div>
+        <div class="logo-item"><img src="/assets/foss.svg"
+            alt="Collaborator 3"></div>
+        <div class="logo-item"><img src="/assets/iedc.svg"
+            alt="Collaborator 3"></div>
+      </div><div class="create-partner">
+        <h3 style="padding-top: 40px; padding-bottom: 20px;">Game Partner</h3>
+        <img src="/assets/h404-color_light.svg" alt="game Partner Logo">
+      </div>
+
+    </section>
 
     <!---footer section--->
     <footer class="foot-main">
       <img id="im-1" src="./svg/svg-image-113.svg" alt>
       <div class="foot-1">
         <div class="foot-left">
-          <p id="f-h"><span class="copyright">&copy;</span> UNRAVEL 2025 </p>
+          <p id="f-h"><span class="copyright"></span> UNRAVEL</p>
           <a href="#home">Home</a>
           <a href="#esports">Esports</a>
           <a href="#schedule">Schedule</a>
         </div>
         <div class="foot-right">
-          <a href="https://www.facebook.com/YourProfile" target="_blank">
-            <i class="bi bi-facebook"></i>
-          </a>
-
-          <a href="https://twitter.com/YourProfile" target="_blank">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-
-          <a href="https://www.instagram.com/YourProfile" target="_blank">
+          <h3 style="padding: 20px; font-size: 17px;">Follow Us</h3>
+          <a href="https://www.instagram.com/alchemy_iedcceal/" target="_blank">
             <i class="bi bi-instagram"></i>
           </a>
 
-          <a href="https://discord.gg/YourServer" target="_blank">
+          <a href="https://discord.gg/R9J4uftN5z" target="_blank">
             <i class="bi bi-discord"></i>
           </a>
         </div>
+        
+        <div id="footer-phones">
+          <h4 style="margin-bottom:10px;font-size:16px">Contact Numbers</h4>
+          <ul style="list-style:none;padding:0;margin:0;line-height:1.8">
+            <li><a href="#" class="phone-link"
+                data-number="+918848686924"><strong>Nihal</strong>: +91 88486
+                86924</a></li>
+            <li><a href="#" class="phone-link"
+                data-number="+917510785122"><strong>Nandana</strong>: +91 75107
+                85122</a></li>
+            <li><a href="#" class="phone-link"
+                data-number="+918281854471"><strong>Arshad</strong>: +91 82818
+                54471</a></li>
+            <li><a href="mailto:iedc@ceattingal.ac.in"><strong>Emial :</strong>
+                iedc@ceattingal.ac.in</a></li>
+          </ul>
+          <script src="/index.js"></script>
+        </div>
         <div class="copyright">
-          <p>
-            <i class="fa-regular fa-copyright"></i>
-            Copyright
-            <strong><span id="yr"></span></strong>. All
-            Rights Reserved
-          </p>
+          <p id="copyright-btm"
+            style="padding-top: 20px; text-align: center; padding-bottom: 60px; transform: translateY(10px);">
+            <i class="far fa-copyright"></i> <span id="year"></span> &copy; Train 303,
+            IEDC. All Rights Reserved.</p>
         </div>
         <script>
         document.getElementById("yr").innerHTML = new Date().getFullYear();
       </script>
       </div>
     </footer>
+    <script src="/index.js"></script>
+
   </body>
 </html>
