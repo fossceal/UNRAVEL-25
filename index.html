@@ -15,13 +15,15 @@
       <span></span>
       <span></span>
       <span></span>
+      <span></span>
     </div>
 
     <nav class="cartoon-menu" id="cartoonMenu">
       <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
-      <a href="#about"><i class="fas fa-info-circle"></i> About</a>
-      <a href="#events"><i class="fas fa-gamepad"></i> Events</a>
-      <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
+      <a href="#esports"><i class="fas fa-gamepad"></i> Events</a>
+      <a href="#footer"><i class="fas fa-phone"></i> Contact</a>
+      <a href="#"><i class="fas fa-times"></i> ENIGMA</a>
+
     </nav>
 
     <!-- Cartoon Logo Bar (Mobile Only) -->
@@ -40,9 +42,9 @@
         <img src="/images/alchemy logo.svg" alt="UNRAVEL LOGO" />
       </div>
       <div class="nav-buttons">
-        <a href="#" class="nav-btn nav-btn-box">Register</a>
-        <a href="#" class="nav-btn1 nav-btn-box"> <i class="bi bi-discord"></i>
-          OUR FAM!</a>
+        <a href="#" class="nav-btn nav-btn-box"><i class="bi bi-discord"></i> OUR FAM!</a>
+        <a href="#" class="nav-btn1 nav-btn-box" id="enigma-btn">  
+          ENIGMA</a>
       </div>
     </nav>
 
@@ -157,403 +159,82 @@
     <script src="/esports/esports.js"></script>
 
     <!---schedule section--->
-    <div class="schedule-container" id="schedule">
-      <section class="schedule-section section-20">
-        <svg
-          class="wave-top-svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none">
-          <path
-            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
-            fill="#2D3748" />
-        </svg>
-        <svg
-          class="wave-bottom-svg"
-          viewBox="0 0 1200 150"
-          preserveAspectRatio="none">
-          <defs>
-            <lineargradient
-              id="waveGradient20"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%">
-              <stop offset="0%" style="stop-color: #ff9a9e; stop-opacity: 1" />
-              <stop offset="50%" style="stop-color: #fecfef; stop-opacity: 1" />
-              <stop
-                offset="100%"
-                style="stop-color: #fecfef; stop-opacity: 1" />
-            </lineargradient>
-          </defs>
-          <path
-            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
-            fill="url(#waveGradient20)" />
-        </svg>
-        <div class="decorative-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
-        <div class="robot-character">
-          <div class="robot-head">
-            <div class="robot-antenna"></div>
-            <div class="robot-eyes">
-              <div class="robot-eye"></div>
-              <div class="robot-eye"></div>
-            </div>
-            <div class="robot-mouth"></div>
-          </div>
-          <div class="robot-body">
-            <div class="robot-arms">
-              <div class="robot-arm left"></div>
-              <div class="robot-arm right"></div>
-            </div>
-          </div>
-          <div class="tentacle-rope">
-            <div class="tentacle"></div>
-          </div>
-        </div>
-        <div class="strawberry-character">
-          <img
-            src="/assets/strawberry.svg"
-            style="width: 100%; max-width: 100px; transform: translateY(20%)" />
-        </div>
-        <div class="main-container">
-          <div class="date-section">
-            <div class="date-number">20</div>
-            <div class="date-day">Saturday</div>
-            <img
-              id="tentacle"
-              src="/assets/enigmaelement.svg"
-              style="
-                position: absolute;
-                bottom: -600px;
-                left: -210px;
-                transform: translateX(0);
-                width: 800px;
-                z-index: 1;
-              " />
-          </div>
-          <div class="schedule-content">
-            <div class="schedule-columns">
-              <div class="morning-schedule">
-                <h1>
-                  <u style="text-decoration: none">Morning</u>
-                </h1>
-                <div class="schedule-item">
-                  <div class="time">8:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Registration Opens</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">9:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops</div>
-                    <div class="event-details">
-                      Alex Adams<br />
-                      TBC - Marisa Burgett<br />
-                      Matt Dawson
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">11:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title highlight">Lunch</div>
-                  </div>
-                </div>
-              </div>
-              <div class="afternoon-schedule">
-                <h1>
-                  <u style="text-decoration: none">Afternoon</u>
-                </h1>
-                <div class="schedule-item">
-                  <div class="time">12:30 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops / Vendor Load-In</div>
-                    <div class="event-details">
-                      Anderson Bluu<br />
-                      Michael Fugoso<br />
-                      Jimmy Bryant
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">3:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops</div>
-                    <div class="event-details">
-                      Jeremy Slagle<br />
-                      TBC - Kenzi Green<br />
-                      Steven Wakabayashi
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">6:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Registration Closes</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">7:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Bridge Party</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">12:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Venue Closes</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="schedule-section section-21"
-        style="transform: translateY(-60px)">
-        <svg
-          class="wave-top-svg1"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          transform="translateY(-800px) scale(1, -1)">
-          <path
-            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
-            fill="#7574b6" />
-        </svg>
-        <svg
-          class="wave-bottom-svg"
-          viewBox="0 0 1200 150"
-          preserveAspectRatio="none">
-          <defs>
-            <lineargradient
-              id="waveGradient21"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%">
-              <stop offset="0%" style="stop-color: #ff4040; stop-opacity: 1" />
-              <stop offset="50%" style="stop-color: #ff4040; stop-opacity: 1" />
-              <stop
-                offset="100%"
-                style="stop-color: #ff4040; stop-opacity: 1" />
-            </lineargradient>
-          </defs>
-          <path
-            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
-            fill="url(#waveGradient21)" />
-        </svg>
-        <div class="decorative-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
-        <div class="robot-character">
-          <div class="robot-head">
-            <div class="robot-antenna"></div>
-            <div class="robot-eyes">
-              <div class="robot-eye"></div>
-              <div class="robot-eye" style="transform: translateY(1px)"></div>
-            </div>
-            <div class="robot-mouth"></div>
-          </div>
-          <div class="robot-body">
-            <div class="robot-arms">
-              <div
-                class="robot-arm left"
-                style="transform: rotate(-20deg)"></div>
-              <div
-                class="robot-arm right"
-                style="transform: rotate(20deg)"></div>
-            </div>
-          </div>
-          <div class="tentacle-rope">
-            <div class="tentacle" style="height: 25px"></div>
-          </div>
-        </div>
-        <div class="strawberry-character1">
-          <img
-            src="/assets/engima2.svg"
-            style="width: 100%; max-width: 700px; transform: translate(-40%,30%)" />
-        </div>
-        <div class="main-container">
-          <div class="date-section">
-            <div class="date-number">21</div>
-            <div class="date-day">Sunday</div>
-            <img
-              id="tentacle"
-              src="/assets/engima.svg"
-              style="
-                position: absolute;
-                bottom: -500px;
-                left: -50px;
-                transform: translateX(0);
-                width: 300px;
-                z-index: 1;
-              " />
-          </div>
-          <div class="schedule-content">
-            <div class="schedule-columns">
-              <div class="morning-schedule">
-                <h1
-                  style="
-                    margin-bottom: 1rem;
-                    font-size: 3rem;
-                    color: #ffffff;
-                  ">
-                  <u style="text-decoration: none">Morning</u>
-                </h1>
-                <div class="schedule-item">
-                  <div class="time">8:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Registration Opens</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">9:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops</div>
-                    <div class="event-details">
-                      Alex Adams<br />
-                      TBC - Marisa Burgett<br />
-                      Matt Dawson
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">11:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title highlight">Lunch</div>
-                  </div>
-                </div>
-              </div>
-              <div class="afternoon-schedule">
-                <h1
-                  style="
-                    margin-bottom: 1rem;
-                    font-size: 3rem;
-                    color: #ffffff;
-                  ">
-                  <u style="text-decoration: none">Afternoon</u>
-                </h1>
-                <div class="schedule-item">
-                  <div class="time">12:30 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops / Vendor Load-In</div>
-                    <div class="event-details">
-                      Anderson Bluu<br />
-                      Michael Fugoso<br />
-                      Jimmy Bryant
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">3:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Workshops</div>
-                    <div class="event-details">
-                      Jeremy Slagle<br />
-                      TBC - Kenzi Green<br />
-                      Steven Wakabayashi
-                    </div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">6:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Registration Closes</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">7:00 PM</div>
-                  <div class="event-info">
-                    <div class="event-title">Bridge Party</div>
-                  </div>
-                </div>
-                <div class="schedule-item">
-                  <div class="time">12:00 AM</div>
-                  <div class="event-info">
-                    <div class="event-title">Venue Closes</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <section id="collaborators" class="collaborators">
-      <h2>Our Collaborators</h2>
+    
+    <!---colaborators section--->
+    <section id="collaborators" class="collaborators"
+      style="padding:40px 20px; text-align:center;">
+      <h2 style="margin-bottom:20px;">Our Collaborators</h2>
 
-      <div class="collab-logos">
-        <div class="logo-item"><img src="/assets/ieee.svg"
-            alt="Collaborator 1"></div>
-        <div class="logo-item"><img src="/assets/iste.svg"
-            alt="Collaborator 2"></div>
-        <div class="logo-item"><img src="/assets/foss.svg"
-            alt="Collaborator 3"></div>
-        <div class="logo-item"><img src="/assets/iedc.svg"
-            alt="Collaborator 3"></div>
-      </div><div class="create-partner">
-        <h3 style="padding-top: 40px; padding-bottom: 20px;">Game Partner</h3>
-        <img src="/assets/h404-color_light.svg" alt="game Partner Logo">
+      <div class="collab-logos"
+        style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-bottom:30px;">
+        <div class="logo-item"><img src="/assets/ieee.svg" alt="Collaborator 1"
+            style="max-height:80px;"></div>
+        <div class="logo-item"><img src="/assets/iste.svg" alt="Collaborator 2"
+            style="max-height:80px;"></div>
+        <div class="logo-item"><img src="/assets/foss.svg" alt="Collaborator 3"
+            style="max-height:80px;"></div>
+        <div class="logo-item"><img src="/assets/iedc.svg" alt="Collaborator 4"
+            style="max-height:80px;"></div>
       </div>
 
+      <div class="partners"
+        style="display:flex; justify-content:center; gap:60px; align-items:center; flex-wrap:wrap;">
+        <div class="create-partner">
+          <h3 style="margin-bottom:10px;">Game Partner</h3>
+          <img src="/assets/h404-color_light.svg" alt="Game Partner Logo"
+            style="max-height:80px;">
+        </div>
+    
+      </div>
     </section>
 
-    <!---footer section--->
-    <footer class="foot-main">
-      <img id="im-1" src="./svg/svg-image-113.svg" alt>
-      <div class="foot-1">
+    <!-- Footer -->
+    <footer class="foot-main" id="footer"
+      style="padding:40px 20px; background:#111; color:#fff; background-image:url(/svg/svg-image-120.svg);">
+      <div class="foot-1"
+        style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; max-width:1200px; margin:0 auto;">
+
         <div class="foot-left">
-          <p id="f-h"><span class="copyright"></span> UNRAVEL</p>
-          <a href="#home">Home</a>
-          <a href="#esports">Esports</a>
+          <p id="f-h" style="font-weight:600; margin-bottom:10px;">UNRAVEL</p>
+          <a href="#home">Home</a><br>
+          <a href="#esports">Esports</a><br>
           <a href="#schedule">Schedule</a>
         </div>
-        <div class="foot-right">
-          <h3 style="padding: 20px; font-size: 17px;">Follow Us</h3>
-          <a href="https://www.instagram.com/alchemy_iedcceal/" target="_blank">
-            <i class="bi bi-instagram"></i>
-          </a>
 
-          <a href="https://discord.gg/R9J4uftN5z" target="_blank">
-            <i class="bi bi-discord"></i>
-          </a>
+        <div class="foot-right">
+          <h3 style="font-size:16px; margin-bottom:10px;">Follow Us</h3>
+          <a href="https://www.instagram.com/alchemy_iedcceal/"
+            target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://discord.gg/R9J4uftN5z" target="_blank"><i
+              class="bi bi-discord"></i></a>
         </div>
-        
+
         <div id="footer-phones">
-          <h4 style="margin-bottom:10px;font-size:16px">Contact Numbers</h4>
-          <ul style="list-style:none;padding:0;margin:0;line-height:1.8">
-            <li><a href="#" class="phone-link"
-                data-number="+918848686924"><strong>Nihal</strong>: +91 88486
+          <h4 style="font-size:16px; margin-bottom:10px;">Contact</h4>
+          <ul style="list-style:none; padding:0; margin:0; line-height:1.6;">
+            <li><a href="tel:+918848686924"><strong>Nihal</strong>: +91 88486
                 86924</a></li>
-            <li><a href="#" class="phone-link"
-                data-number="+917510785122"><strong>Nandana</strong>: +91 75107
+            <li><a href="tel:+917510785122"><strong>Nandana</strong>: +91 75107
                 85122</a></li>
-            <li><a href="#" class="phone-link"
-                data-number="+918281854471"><strong>Arshad</strong>: +91 82818
+            <li><a href="tel:+918281854471"><strong>Arshad</strong>: +91 82818
                 54471</a></li>
-            <li><a href="mailto:iedc@ceattingal.ac.in"><strong>Emial :</strong>
+            <li><a href="mailto:iedc@ceattingal.ac.in"><strong>Email:</strong>
                 iedc@ceattingal.ac.in</a></li>
           </ul>
-          <script src="/index.js"></script>
         </div>
-        <div class="copyright">
-          <p id="copyright-btm"
-            style="padding-top: 20px; text-align: center; padding-bottom: 60px; transform: translateY(10px);">
-            <i class="far fa-copyright"></i> <span id="year"></span> &copy; Train 303,
-            IEDC. All Rights Reserved.</p>
-        </div>
-        <script>
-        document.getElementById("yr").innerHTML = new Date().getFullYear();
-      </script>
+      </div>
+
+      <div class="copyright"
+        style="text-align:center; margin-top:30px; font-size:14px; opacity:0.8;">
+        <p><i class="far fa-copyright"></i> <span id="year"></span> &copy; Train
+          303, IEDC. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
     <script src="/index.js"></script>
 
   </body>
