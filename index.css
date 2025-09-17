@@ -19,6 +19,39 @@
   gap: 2rem;
 }
 
+.nav-buttons a:hover {
+  background-color: #000;
+
+}
+
+#enigma-btn {
+  background-color: rgb(248, 234, 127);
+  color: #000;
+}
+
+#enigma-btn:hover {
+  background-color: orange;
+  transform: translateY(-4px) scale(1.05);
+}
+
+#enigma-btn {
+  background-color: #ffcc00;
+  color: #222;
+  font-weight: bold;
+  border: 3px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 0px #000;
+}
+
+#enigma-btn:hover {
+  background-color: #ff9900;
+  transform: translateY(-4px) scale(1.08) rotate(-1deg);
+  box-shadow: 6px 6px 0px #000;
+  filter: saturate(1.3) contrast(1.2);
+}
+
+
 .nav-btn {
   color: #050505;
   border-radius: 2rem 2rem 2rem 2rem / 3rem 3rem 3rem 3rem;
@@ -130,7 +163,7 @@ body {
 
 .date {
   text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transform: translateY(250px);
   font-size: 30px;
   -webkit-transform: translateY(250px);
@@ -874,11 +907,15 @@ a:hover {
     background: url("/assets/home-mob.png") no-repeat center center;
     background-size: cover;
   }
-  .navbar > *, .nav-buttons > *, .date{
+
+  .navbar>*,
+  .nav-buttons>*,
+  .date {
     display: none;
   }
+
   /* hide everything inside home */
-  #home > * {
+  #home>* {
     display: none;
   }
 }
@@ -894,8 +931,10 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background: #080808; /* cartoon yellow bg */
-    border-bottom: 5px solid #3b5bbc; /* cartoon strip */
+    background: #080808;
+    /* cartoon yellow bg */
+    border-bottom: 5px solid #3b5bbc;
+    /* cartoon strip */
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
@@ -903,7 +942,8 @@ a:hover {
   }
 
   .logo-img {
-    height: 40px; /* adjust size */
+    height: 40px;
+    /* adjust size */
     width: auto;
   }
 }
@@ -937,9 +977,11 @@ a:hover {
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
@@ -948,7 +990,8 @@ a:hover {
 .cartoon-menu {
   position: fixed;
   top: 0;
-  right: -260px; /* hidden off-screen */
+  right: -260px;
+  /* hidden off-screen */
   height: 100%;
   width: 240px;
   background: #ffe88c;
@@ -989,11 +1032,13 @@ a:hover {
 
 /* Show menu */
 .cartoon-menu.show {
-  right: 0; /* slide in */
+  right: 0;
+  /* slide in */
 }
 
 /* Hide hamburger + menu on desktop */
 @media (min-width: 769px) {
+
   .hamburger,
   .cartoon-menu {
     display: none !important;
@@ -1005,7 +1050,8 @@ a:hover {
 .collaborators {
   text-align: center;
   padding: 3rem 1rem;
-  background: #fdf5c9; /* match cartoon theme */
+  background: #fdf5c9;
+  /* match cartoon theme */
 }
 
 .collaborators h2 {
@@ -1022,21 +1068,25 @@ a:hover {
 }
 
 .collab-logos img {
-  height: 50px;       /* keep logos small */
+  height: 50px;
+  /* keep logos small */
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(2px 2px 0 #000); /* cartoon effect */
+  filter: drop-shadow(2px 2px 0 #000);
+  /* cartoon effect */
   transition: transform 0.3s ease;
 }
 
 .collab-logos img:hover {
-  transform: scale(1.1) rotate(-2deg); /* fun hover */
+  transform: scale(1.1) rotate(-2deg);
+  /* fun hover */
 }
 
 /* Collaborators (drop this where your other CSS lives) */
 .collaborators {
   padding: 2.5rem 1rem;
-  background: #2e2e2d; /* page/theme friendly */
+  background: #2e2e2d;
+  /* page/theme friendly */
   text-align: center;
 }
 
@@ -1058,7 +1108,8 @@ a:hover {
 
 /* each logo wrapper — keeps logos small & consistent */
 .logo-item {
-  width: 200px;        /* control visible size */
+  width: 200px;
+  /* control visible size */
   height: 56px;
   display: flex;
   align-items: center;
@@ -1074,25 +1125,28 @@ a:hover {
   max-width: 1000%;
   object-fit: contain;
   display: block;
-    width: 100%;
-  height: 800%;
-}
-.tink img{
   width: 100%;
   height: 800%;
 }
+
+.tink img {
+  width: 100%;
+  height: 800%;
+}
+
 /* responsive: smaller on very small screens */
 @media (max-width: 420px) {
   .logo-item {
     width: 72px;
     height: 46px;
   }
+
   .logo-item img {
     max-height: 32px;
   }
 }
 
- .create-partner {
+.create-partner {
   text-align: center;
 }
 
@@ -1108,6 +1162,6 @@ a:hover {
   color: #ffffff;
 }
 
-#footer-phones a{
+#footer-phones a {
   text-decoration: none;
 }
