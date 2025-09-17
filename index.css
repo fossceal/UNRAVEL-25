@@ -130,6 +130,7 @@ body {
 
 .date {
   text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transform: translateY(250px);
   font-size: 30px;
   -webkit-transform: translateY(250px);
@@ -1450,4 +1451,252 @@ a:hover {
     display: block;
     width: 40%;
   }
+}
+
+/* MOBILE ONLY – hide full home and replace with bg */
+@media (max-width: 768px) {
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/home-mob.png") no-repeat center center;
+    background-size: cover;
+  }
+  .navbar > *, .nav-buttons > *, .date{
+    display: none;
+  }
+  /* hide everything inside home */
+  #home > * {
+    display: none;
+  }
+}
+
+/* Hide on desktop */
+.mobile-logo-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-logo-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #080808; /* cartoon yellow bg */
+    border-bottom: 5px solid #3b5bbc; /* cartoon strip */
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .logo-img {
+    height: 40px; /* adjust size */
+    width: auto;
+  }
+}
+
+
+/* Cartoon Hamburger Button */
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.hamburger span {
+  height: 5px;
+  width: 100%;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.3s;
+}
+
+/* X Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Cartoon Menu */
+.cartoon-menu {
+  position: fixed;
+  top: 0;
+  right: -260px; /* hidden off-screen */
+  height: 100%;
+  width: 240px;
+  background: #ffe88c;
+  border-left: 3px solid #000;
+  box-shadow: -6px 0 0 #000;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: right 0.4s ease;
+  z-index: 2000;
+}
+
+.cartoon-menu a {
+  font-family: "Comic Sans MS", cursive;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 0.8rem;
+  background: #f5e9d0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 #000;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.cartoon-menu a:hover {
+  background: #fff;
+  transform: translateX(4px);
+}
+
+.cartoon-menu a.active {
+  background: #6aff6a;
+}
+
+/* Show menu */
+.cartoon-menu.show {
+  right: 0; /* slide in */
+}
+
+/* Hide hamburger + menu on desktop */
+@media (min-width: 769px) {
+  .hamburger,
+  .cartoon-menu {
+    display: none !important;
+  }
+}
+
+
+/* Collaborators Section */
+.collaborators {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fdf5c9; /* match cartoon theme */
+}
+
+.collaborators h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+  text-shadow: 2px 2px #fff;
+}
+
+.collab-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.collab-logos img {
+  height: 50px;       /* keep logos small */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 0 #000); /* cartoon effect */
+  transition: transform 0.3s ease;
+}
+
+.collab-logos img:hover {
+  transform: scale(1.1) rotate(-2deg); /* fun hover */
+}
+
+/* Collaborators (drop this where your other CSS lives) */
+.collaborators {
+  padding: 2.5rem 1rem;
+  background: #2e2e2d; /* page/theme friendly */
+  text-align: center;
+}
+
+.collaborators h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+/* logos row */
+.collab-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* each logo wrapper — keeps logos small & consistent */
+.logo-item {
+  width: 200px;        /* control visible size */
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* actual image sizing — will not exceed wrapper */
+.logo-item img {
+  max-height: 300px;
+  max-width: 1000%;
+  object-fit: contain;
+  display: block;
+    width: 100%;
+  height: 800%;
+}
+.tink img{
+  width: 100%;
+  height: 800%;
+}
+/* responsive: smaller on very small screens */
+@media (max-width: 420px) {
+  .logo-item {
+    width: 72px;
+    height: 46px;
+  }
+  .logo-item img {
+    max-height: 32px;
+  }
+}
+
+ .create-partner {
+  text-align: center;
+}
+
+.create-partner img {
+  height: 60px;
+  margin-bottom: 8px;
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
+.create-partner h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#footer-phones a{
+  text-decoration: none;
 }
